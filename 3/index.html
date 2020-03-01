@@ -70,6 +70,14 @@
             <label for="formGroupExampleInput">Enter Pallets</label>
             <input type="text" class="form-control text text-center" id="num10" placeholder="">
           </div>
+          <div class="form-group text-center">
+            <label for="formGroupExampleInput">Enter Chains</label>
+            <input type="text" class="form-control text text-center" id="num11" placeholder="">
+          </div>
+          <div class="form-group text-center">
+            <label for="formGroupExampleInput">Enter Misc Expenses</label>
+            <input type="text" class="form-control text text-center" id="num12" placeholder="">
+          </div>
       </form>
       <button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom: 5%;" onclick="calculate(), window.scrollTo(0,0)">Calculate pay</button>
 
@@ -87,6 +95,8 @@
           var field8=document.getElementById("num8").value;
           var field9=document.getElementById("num9").value;
           var field10=document.getElementById("num10").value;
+          var field11=document.getElementById("num11").value;
+          var field12=document.getElementById("num12").value;
 
           var result=parseFloat(field1 * 0.49)
           +parseFloat(field2 * 18.50)
@@ -98,6 +108,8 @@
           +parseFloat(field8 * 50)
           +parseFloat(field9 * 18.50)
           +parseFloat(field10 * 1);
+          +parseFloat(field11 * 15);
+          +parseFloat(field12 * 1);
 
           if(!isNaN(result))
           {
