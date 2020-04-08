@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Stimulus Check Calculator</title>
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4 text-center">Stimulus Check Calculator 2020</h1>
+          <p class="lead text-center">Your stimulus check will be based on your 2019 tax return. If you haven't filed your 2019 taxes yet, the government will use your 2018 tax return.</p>
+          
+        </div>
+      </div>
+      <h1 class="display-4 text-center" id="total"></h1>
+        <h4 class="mb-3">Filing Status</h4>
+        <div class="d-block my-3">
+            <div class="custom-control custom-radio">
+              <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
+              <label class="custom-control-label" for="credit">Single</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="">
+              <label class="custom-control-label" for="debit">Married</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="">
+              <label class="custom-control-label" for="paypal">Head of Household</label>
+            </div>
+          </div>
+          <form>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Adjusted Gross Income</label>
+              <input type="number" class="form-control" id="agi" placeholder="Enter a number">
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Number of Children Claimed as Dependents</label>
+              <input type="number" class="form-control" id="Dependents" placeholder="Enter a number">
+            </div>
+          </form>
+          <button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom: 1.5%;" onclick="Calculate()">Calculate Check</button>
+
+          <!-- Function to calculate stimulus check amount  -->
+          <script>
+              function Calculate()
+              {
+                let adjustedIncome = document.getElementById("agi").value;
+                let dp = document.getElementById("Dependents").value;
+
+                let baseCheck = 1200;
+                let depAmt = 500;
+
+                let result = parseFloat(adjustedIncome + dp);
+
+                if(!isNaN(result))
+                {
+                    document.getElementById("total").innerHTML="You should get: $"+result;
+                }
+              }
+          </script>
+</body>
+</html>
