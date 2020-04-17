@@ -85,31 +85,31 @@
 
         function calculate()
         {
-          let field1=document.getElementById("num1").value;
-          let field2=document.getElementById("num2").value;
-          let field3=document.getElementById("num3").value;
-          let field4=document.getElementById("num4").value;
-          let field5=document.getElementById("num5").value;
-          let field6=document.getElementById("num6").value;
-          let field7=document.getElementById("num7").value;
-          let field8=document.getElementById("num8").value;
-          let field9=document.getElementById("num9").value;
-          let field10=document.getElementById("num10").value;
-          let field11=document.getElementById("num11").value;
-          let field12=document.getElementById("num12").value;
+          let miles=document.getElementById("num1").value;
+          let stops=document.getElementById("num2").value;
+          let superStops=document.getElementById("num3").value;
+          let delay=document.getElementById("num4").value;
+          let meals=document.getElementById("num5").value;
+          let layovers=document.getElementById("num6").value;
+          let shuttles=document.getElementById("num7").value;
+          let crossdock=document.getElementById("num8").value;
+          let inspections=document.getElementById("num9").value;
+          let pallets=document.getElementById("num10").value;
+          let chains=document.getElementById("num11").value;
+          let misc=document.getElementById("num12").value;
 
-          let result=parseFloat(field1 * 0.36)
-          +parseFloat(field2 * 12.50)
-          +parseFloat(field3 * 32)
-          +parseFloat(field4 * 21)
-          +parseFloat(field5 * 25)
-          +parseFloat(field6 * 30)
-          +parseFloat(field7 * 25)
-          +parseFloat(field8 * 50)
-          +parseFloat(field9 * 18.50)
-          +parseFloat(field10 * 1);
-          +parseFloat(field11 * 15);
-          +parseFloat(field12 * 1);
+          let result=parseFloat(miles * 0.36)
+          +parseFloat(stops * 12.50)
+          +parseFloat(superStops * 32)
+          +parseFloat(delay * 21)
+          +parseFloat(meals * 25)
+          +parseFloat(layovers * 30)
+          +parseFloat(shuttles * 25)
+          +parseFloat(crossdock * 50)
+          +parseFloat(inspections * 18.50)
+          +parseFloat(pallets * 1);
+          +parseFloat(chains * 15);
+          +parseFloat(misc * 1);
 
           if(!isNaN(result))
           {
